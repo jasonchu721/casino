@@ -18,22 +18,6 @@ class Game
   end
 
   def number_guessing_game
-<<<<<<< HEAD
-    puts "Pick any number!"
-      random_number = rand(6)
-    puts "Pick any number between 0 and 6"
-      guess = gets.chomp.to_i
-  until guess == random_number
-    puts "Sorry wrong choice, you lose!!"
-    guess = gets.chomp.to_i
-  end
-  puts "You Da Man Brah!"
-
-
-
-
-end
-=======
     puts "Welcome to the number guessing game #{@player}"
     sleep(1)
     puts "How much money would you like to bet"
@@ -67,5 +51,4 @@ end
 end
 
 
->>>>>>> c6f883d1c94fe8457db52ce99de80fb050964ba8
 
