@@ -28,7 +28,7 @@ class Game
   end
   puts "You Da Man Brah!"
 
-
+  puts "plant"
 
 
 end
