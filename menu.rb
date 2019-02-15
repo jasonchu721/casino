@@ -7,8 +7,8 @@ class Game
     puts "\nWelcome to The Casino of The Gods"
     puts "Please enter your name"
     print "> "
-    player = gets.strip
-    puts "You found $1k? Good for you, #{player}"
+    @player = gets.strip
+    puts "You found $1k? Good for you, #{@player}"
     sleep(1)
     puts "your balance is now $1000"
     sleep(1)
@@ -34,13 +34,15 @@ class Game
     puts "Welcome to the number guessing game #{@player}"
     sleep(1)
     puts "How much money would you like to bet"
-    #intake player bet
-      number = rand(1..5)
+    bet=gets.to_i
+    sleep(1)
+    number = rand(1..5)
     puts "Pick any number between 1 and 5!"
     winner=false
 
     while winner==false
       guess=gets.to_i
+      sleep(1)
       
       if guess>number then
         puts("Sorry, that number is too high")
@@ -61,6 +63,11 @@ class Game
       end
     end
   end
+
+
+
+
+
 end
         
 
