@@ -1,5 +1,32 @@
 
 @amount_won = [5, 10, 20, 50, 100, 500]
+
+require "pry"
+
+$balance = nil
+
+class Wallet
+  attr_accessor :balance
+  
+  def initialize
+  end
+
+  def start(balance)
+    $balance = balance
+    return $balance
+  end
+
+  def win(amount)
+    $balance = $balance + amount
+  end
+
+  def lose(amount)
+    $balance = $balance - amount
+  end
+
+end
+
+$wallet = Wallet.new
   
 def event_thirsty
   puts "You're thirsty, What drink do you want to buy?"
