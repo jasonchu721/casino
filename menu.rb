@@ -27,7 +27,7 @@ class Game
     when 1
       number_guessing_game
     when 2
-      Dice
+      Dice.new
     when 3
       exit
     else
@@ -70,7 +70,7 @@ class Game
   end
 end
         
-class Dice
+class Dice < Game
 
   @die1 = []
   @die2 = []
@@ -124,13 +124,14 @@ class Dice
   def space 
     puts " " * 5
   end
+
   def play_again
     puts "Do you want to play again? Yes or No?"
     case gets.strip
     when "yes"
       menu
     else
-      @game.game_menu
+      game_menu
     end
   end
 end
@@ -139,6 +140,6 @@ end
 
 
 @game = Game.new
-dice = Dice.new
+@dice = Dice.new
 
-game
+@game
